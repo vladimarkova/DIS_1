@@ -3,7 +3,14 @@
 
 void test()
 {
-    Sequence sequence3(3);
-    
-    sequence3.print();
-}
+    Sequence sequence; 
+    char response = '1';
+    while (response != '0')
+    {
+        sequence.read();
+        sequence.print();
+
+        cout << "Enter '0' to exit or '1' to start again: " << endl;
+        cin >> response;
+    }
+} 
