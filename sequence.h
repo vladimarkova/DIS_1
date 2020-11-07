@@ -44,8 +44,9 @@ class Sequence
 
     void read()
     {
+        cout << endl;
         cout << "Enter (lambda) first number of the sequence: " << endl; 
-        int number;
+        double number;
         cin >> number;
         while (number == -8)
         {
@@ -59,31 +60,50 @@ class Sequence
     {
         if (first < -8)
         {
-            cout << "Not convergent: n--->inf => {an}--->-inf" << endl;
+            cout << "Not convergent, monotonously decreasing: n--->inf => {an}--->-inf" << endl << endl;
         }
         if (first > -8 && first < 0)
         {
-            cout << "Not convergent: n--->inf => {an}--->+inf" << endl;
+            cout << "Not convergent, monotonously increasing: n--->inf => {an}--->+inf" << endl << endl;
         }
         if (first == 0) 
         {
-            cout << "Convergent: n--->inf => {an}--->l, l = 10" << endl;
+            cout << "Convergent, monotonous: n--->inf => {an}--->l, l = 10" << endl << endl;
         }
-        if (first > 0 && first < 10)
+        if (first > 0)
         {
-            cout << "Convergent: n--->inf => {an}--->l, l = 8" << endl;
+            if (first < 1)
+            {
+                cout << "Convergent, monotonously decreasing: n--->inf => {an}--->l, l = 8" << endl << endl;
+            }
+            if (first == 1) 
+            {
+                cout << "Convergent, monotonous: n--->inf => {an}--->l, l = 8" << endl << endl;
+            }
+            if (first > 1 && first < 8)
+            {
+                cout << "Convergent, monotonously increasing: n--->inf => {an}--->l, l = 8" << endl << endl;
+            }
+            if (first == 8) 
+            {
+                cout << "Convergent, monotonous: n--->inf => {an}--->l, l = 8" << endl << endl;
+            }
+            if (first > 8 && first < 10)
+            {
+                cout << "Convergent, monotonously decreasing: n--->inf => {an}--->l, l = 8" << endl << endl;
+            }
         }
         if (first == 10)
         {
-            cout << "Convegent: n--->inf => {an}--->l, l = 10" << endl;
+            cout << "Convegent, monotonous: n--->inf => {an}--->l, l = 10" << endl << endl;
         }
         if (first > 10)
         {
-            cout << "Not convergent: n--->inf => {an}--->+inf" << endl;
+            cout << "Not convergent, monotonously increasing: n--->inf => {an}--->+inf" << endl << endl;
         }
     }
 
-    double getElementByIndex(int index) 
+    double getElementByIndex(int index) const
     {
         double result = first;
         if (index == 1)
