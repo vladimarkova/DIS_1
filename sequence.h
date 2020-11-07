@@ -44,7 +44,6 @@ class Sequence
 
     void read()
     {
-        cout << endl;
         cout << "Enter (lambda) first number of the sequence: " << endl; 
         double number;
         cin >> number;
@@ -121,6 +120,7 @@ class Sequence
 
     void print()
     {
+        cout << endl;
         cout << "Sequence: lambda = " << first << ": " << endl; 
         convergency();
         cout << "Enter five indeces" << endl << endl; 
@@ -133,5 +133,6 @@ class Sequence
         {
             cout << "a" << indeces[i] << " = " << getElementByIndex(indeces[i]) << endl; 
         } 
+        cout << endl;
     } 
 }; 
